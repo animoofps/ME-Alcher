@@ -61,9 +61,9 @@ end
 setupOptions()
 
 local function Alching(itemToAlch)
-    if (API.ReadPlayerAnim() == 24458) then
-        API.SetMaxIdleTime(5)
-        API.RandomSleep2(100, 200, 400)
+    -- if (API.ReadPlayerAnim() == 24458) then
+    if API.CheckAnim(5) then
+        API.RandomSleep2(600, 200, 400)
     else
         local AB = API.GetABs_name1("High Level Alchemy")
         if AB.enabled then
@@ -78,6 +78,7 @@ local function Alching(itemToAlch)
 end
 API.SetDrawTrackedSkills(true)
 while (API.Read_LoopyLoop()) do -----------------------------------------------------------------------------------
+    API.SetMaxIdleTime(5)
     if (comboBoxSelect.return_click) then
         comboBoxSelect.return_click = false
         for i, item in ipairs(inventoryItems) do
