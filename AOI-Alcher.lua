@@ -75,7 +75,7 @@ local function Alching(itemToAlch)
         end
     end
 end
-
+API.SetDrawTrackedSkills(true)
 while (API.Read_LoopyLoop()) do -----------------------------------------------------------------------------------
     API.SetMaxIdleTime(5)
     if (comboBoxSelect.return_click) then
