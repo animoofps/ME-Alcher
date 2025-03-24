@@ -6,3 +6,4 @@
 - Nature runes
 - Staff of fire
 - Item you want to alch
+- High Alchemy spell on ability bar
